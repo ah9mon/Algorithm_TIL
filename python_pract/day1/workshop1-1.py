@@ -1,0 +1,1 @@
+print(f"It's SSAFY 8")
