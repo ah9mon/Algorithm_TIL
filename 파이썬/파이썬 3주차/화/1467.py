@@ -29,14 +29,14 @@ class Stack:
         return f'{self.name}'
 
 
-a = Stack()
-a.push(1)
-a.push(2)
-print(a.__repr__())
-print(a.pop())
-print(a.top())
-print(a.pop())
-print(a.top())
-print(a.empty())
+a = Stack() # a.name = []
+a.push(1) # a.name = [1]
+a.push(2) # a.name = [1,2]
+print(a.__repr__()) # [1,2]
+print(a.pop()) # 2
+print(a.top()) # 1
+print(a.pop()) # 1
+print(a.top()) # None
+print(a.empty()) # True
 
 
