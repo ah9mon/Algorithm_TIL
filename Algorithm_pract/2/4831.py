@@ -45,7 +45,3 @@ for n in range(1,T+1):
     M_list = list(map(int,input().split()))
     print(f'#{n} {min_charging(K,N,M,M_list)}')
 
-
-# K = # 한번 충전으로 이동
-# N = # 정류장 개수
-# M = # 충전기 개수
