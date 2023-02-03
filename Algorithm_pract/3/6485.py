@@ -12,16 +12,6 @@ def stop_check(stop_list, P, route_list, N):
     
     return ' '.join(str(count) for count in counts)
 
-
-
-
-
-
-
-
-
-
-
 T = int(input())
 
 for i in range(1,T+1):

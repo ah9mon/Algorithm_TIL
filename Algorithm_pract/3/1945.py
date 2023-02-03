@@ -21,10 +21,7 @@ def factorization(N):
     
             division_counts[i] += 1 # 카운트 
     
-    
-
-    return f'{division_counts[0]} {division_counts[1]} {division_counts[2]} {division_counts[3]} {division_counts[4]}'
-
+    return ' '.join(str(count) for count in division_counts)
 
 T = int(input())
 for i in range(1,T+1):
