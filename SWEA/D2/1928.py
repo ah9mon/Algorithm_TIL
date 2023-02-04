@@ -32,7 +32,7 @@ testcase_num = int(input())
 
 sentence_list = [input() for index_num0 in range(testcase_num)]
 
-# 
+# decoding
 
 for index_num1 in range(len(sentence_list)):
     char_list = []
