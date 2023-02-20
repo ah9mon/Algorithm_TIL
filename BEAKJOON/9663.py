@@ -7,10 +7,10 @@
 
 def N_queen(law):
     global cnt
-    for next_law in range(law,N):
-        if not 0 in visited[next_law]:
-            return
-    
+    # for next_law in range(law,N):
+    #     if not 0 in visited[next_law]:
+    #         return
+    #
 
     if law == N:
         cnt += 1
@@ -65,6 +65,8 @@ def N_queen(law):
                         if 0 <= ny < N and 0 <= nx < N:
                             # if 0 <= ny < N and 0 <= nx < N and d[ny][nx] == 0:
                             visited[ny][nx] -= 1
+
+
 
 N = int(input()) # 체스판 크기 N x N # 놓아야하는 퀸 개수
 visited = [[0]*N for _ in range(N)]
