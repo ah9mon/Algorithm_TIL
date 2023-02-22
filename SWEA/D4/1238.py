@@ -15,8 +15,6 @@ https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV1
 
 '''
 
-
-
 import sys
 sys.stdin = open('input_for_1238.txt')
 
@@ -28,17 +26,13 @@ def bfs(n):
     visited[n] = 1 # 인큐체크
     while q: # 큐가 빌때까지
         x = q.popleft()
-        print(x, end=' ')
+        # print(x, end=' ')
         for node in graph[x]:
             if not visited[node]: # 방문안햇으면
                 q.append(node) # 인큐
-                visited[node] = 1 # 인큐 체크
-
-    if x > max_node:
-        max_node = x
-    print('')
-
-for i in range(1):
+                visited[node] = visited[x] + 1 # 인큐 체크
+    
+for i in range(1,11):
     # 데이터의 길이, 시작점
     E, N = map(int,input().split())
 
@@ -50,14 +44,18 @@ for i in range(1):
 
     for j in range(0,E,2):
         graph[lines[j]].append(lines[j+1])
+    # print(graph)
     # 인큐 체크용
     visited = [0]*101
 
-    # 최댓값
-    max_node = 0 # 초기값
-
-    # print(graph)
     bfs(N)
-    print(max_node)
+    
+    max_move = max(visited)
+    # print(max_move)
+    for k in range(100,-1,-1):
+        if visited[k] == max_move:
+            print(f'#{i} {k}')
+            break
+    
 
 
