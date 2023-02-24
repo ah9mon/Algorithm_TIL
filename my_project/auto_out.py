@@ -15,12 +15,13 @@ def auto_out():
         url = 'https://edu.ssafy.com'
         date = urllib.request.urlopen(url).headers['Date'][5:-4]
         d, m, y, hour, min, sec = date[:2], month[date[3:6]], date[7:11], int(date[12:14]) + 9 , date[15:17], date[18:]
-        min_str = str(date[15:17])
+        min_str = str(min)
+        hour_str = str(hour)
     
         print(f'[{url}]의 서버시간\n{y}년 {m}월 {d}일 {hour}시 {min}분 {sec}초')
         time.sleep(2) # 딜레이 3초 
 
-        if min_str == '00': # 만약 18시가 되면 
+        if hour_str == '18' and min_str == '00': # 만약 18시가 되면 
             
             #클릭 #Point(x=653, y=343)
             pyautogui.click(653,343,button='left',clicks =2, interval =1) #퇴실 클릭 
