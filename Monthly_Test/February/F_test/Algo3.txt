@@ -1,0 +1,19 @@
+# 3 번 순회
+
+
+(1)
+
+def inorder(v):
+    if v have v.left: # 만약 v가 왼쪽 자식이 있으면
+        inorder(v.left) # 왼쪽 자식 방문
+
+    visit(v) # 부모노드인 v방문 # print(v)
+
+    if v have v.right: # 만약 v가 오른쪽 자식이 있으면
+        inorder(v.right) # 오른쪽 자식 방문
+
+(2)
+
+중위 순회 B A D C E
+
+후위 순회 B D E C A
