@@ -9,12 +9,20 @@
 def func(s,e,c):
     global d
     global max_sum
+    if c == 3:
+        
+        sum_now = sum(d)
+        if sum_now <= M:
+            if max_sum < sum_now:
+                max_sum = sum_now
+        return
+    
+    # elif c > 3:
+    #     return
+    
     if s == e :
-        if c ==3:
-            sum_now = sum(d)
-            if sum_now <= M:
-                if max_sum < sum_now:
-                    max_sum = sum_now
+        return
+
     else:
         d[s] = cards[s]
         func(s+1,e,c+1)
@@ -27,6 +35,6 @@ N, M = map(int,input().split())
 cards = list(map(int,input().split()))
 d = [0] * N
 max_sum = 0 
-func(0,N-1,0)
+func(0,N,0)
 print(max_sum)
 
