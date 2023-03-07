@@ -85,17 +85,15 @@ def func():
             i += 1
             counts = 0
         
-        # 좌표 확인 
+        # 입력 좌표와 같으면 (정답이면) 
         if (ny,nx) == (y,x):
-            return N
+            return N # 해당 좌표의 원숭이가 인식하는 방법을 출력 
         
+        # 다음칸 확인 
         ny += dy[i]
         nx += dx[i]
         N += 1
         counts += 1
-        
-    
-            
     
 # 멍멍이 금고 위치 
 y, x = map(int,input().split())
