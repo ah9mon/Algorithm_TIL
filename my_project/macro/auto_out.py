@@ -24,7 +24,7 @@ def auto_out():
         if hour_str == '18' and min_str == '00': # 만약 18시가 되면 
             
             #클릭 #Point(x=653, y=343)
-            pyautogui.click(653,343,button='left',clicks =2, interval =1) #퇴실 클릭 
+            pyautogui.click(650,343,button='left',clicks =2, interval =1) #퇴실 클릭 
     
             #클릭 메세지 출력
             print("클릭 했습니다.")
