@@ -1,14 +1,14 @@
 def auto_out():
-    # ëª¨ë“ˆ ë° íŒ¨í‚¤ì§€
-    import pyautogui # ë§ˆìš°ìŠ¤ ì¡°ì‘ìš© 
-    from datetime import datetime # í˜„ì¬ì‹œê°„ ì¶œë ¥ìš©
-    import urllib.request # ì„œë²„ì‹œê°„ ê°€ì ¸ì˜¤ê¸°
-    import time # ë”œë ˆì´ìš©
-    import os # ì»´í“¨í„° ë„ê¸° ìš©
+    # ëª¨ë“ˆ ë°? ?Œ¨?‚¤ì§?
+    import pyautogui # ë§ˆìš°?Š¤ ì¡°ì‘?š© 
+    from datetime import datetime # ?˜„?¬?‹œê°? ì¶œë ¥?š©
+    import urllib.request # ?„œë²„ì‹œê°? ê°?? ¸?˜¤ê¸?
+    import time # ?”œ? ˆ?´?š©
+    import os # ì»´í“¨?„° ?„ê¸? ?š©
 
-    #í˜„ì¬ ì‹œê°„ ì¶œë ¥ ë° í´ë¦­
+    #?˜„?¬ ?‹œê°? ì¶œë ¥ ë°? ?´ë¦?
     while True:    
-        # ì„œë²„ì‹œê°„ ì¶œë ¥ 
+        # ?„œë²„ì‹œê°? ì¶œë ¥ 
         month = {'Jan':'01', 'Feb':'02', 'Mar':'03', 'Apr':'04', 'May':'05', 'Jun':'06', \
             'Jul':'07', 'Aug':'08', 'Sep':'09', 'Oct':'10', 'Nov':'11', 'Dec':'12'}
         
@@ -18,21 +18,21 @@ def auto_out():
         min_str = str(min)
         hour_str = str(hour)
     
-        print(f'[{url}]ì˜ ì„œë²„ì‹œê°„\n{y}ë…„ {m}ì›” {d}ì¼ {hour}ì‹œ {min}ë¶„ {sec}ì´ˆ')
-        time.sleep(2) # ë”œë ˆì´ 3ì´ˆ 
+        print(f'[{url}]?˜ ?„œë²„ì‹œê°?\n{y}?…„ {m}?›” {d}?¼ {hour}?‹œ {min}ë¶? {sec}ì´?')
+        time.sleep(2) # ?”œ? ˆ?´ 3ì´? 
 
-        if hour_str == '18' and min_str == '00': # ë§Œì•½ 18ì‹œê°€ ë˜ë©´ 
+        if hour_str == '18' and min_str == '00': # ë§Œì•½ 18?‹œê°? ?˜ë©? 
             
-            #í´ë¦­ #Point(x=653, y=343)
-            pyautogui.click(650,343,button='left',clicks =2, interval =1) #í‡´ì‹¤ í´ë¦­ 
+            #?´ë¦? #Point(x=653, y=343)
+            pyautogui.click(651,341,button='left',clicks =2, interval =1) #?‡´?‹¤ ?´ë¦? 
     
-            #í´ë¦­ ë©”ì„¸ì§€ ì¶œë ¥
-            print("í´ë¦­ í–ˆìŠµë‹ˆë‹¤.")
+            #?´ë¦? ë©”ì„¸ì§? ì¶œë ¥
+            print("?´ë¦? ?–ˆ?Šµ?‹ˆ?‹¤.")
             time.sleep(2) 
             break
-    #ì»´í“¨í„° ë„ê¸°
-    os.system('shutdown -l') # ë¡œê·¸ì•„ì›ƒ
-    os.system('shutdown -s -t 5') # 10ì´ˆ ë’¤ ì»´í“¨í„° ì¢…ë£Œ
+    #ì»´í“¨?„° ?„ê¸?
+    os.system('shutdown -l') # ë¡œê·¸?•„?›ƒ
+    os.system('shutdown -s -t 5') # 10ì´? ?’¤ ì»´í“¨?„° ì¢…ë£Œ
 
 
 
