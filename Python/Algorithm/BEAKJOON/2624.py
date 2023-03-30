@@ -2,6 +2,9 @@
 
 '''
 https://www.acmicpc.net/problem/2624
+10      
+10 + 5
+10 + 5 + 1 
 '''
 import copy
 # 지폐의 금액
