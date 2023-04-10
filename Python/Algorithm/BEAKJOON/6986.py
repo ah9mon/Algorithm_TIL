@@ -39,7 +39,6 @@ def func(n):
         for i in range(6):
             for j in range(3):
                 if arr[i][j] != 0: # 승 무 패 중에 0 이 아닌게 있으면 
-                
                     return 
         rltt = 1        
         return 
