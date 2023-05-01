@@ -2,39 +2,31 @@
 
 '''
 https://www.acmicpc.net/problem/1654
-
-N의 랜선을 만들어야함 
-
-현재는 K개의 랜선을 갖고 있지만 길이가 제가각
-
-K 개의 랜선을 잘라서 모두 같은 길이의 N개의 랜선만들어라 
-
-만들 수 없는 경우는 없다 
-
-항상 길이는 정수 임 
-
-최대 랜선 길이는 ? 
-
-N 너무 큼 -> 이진탐색 
+랜선을 모두 자를 필요 없음 스바
+100 800 의 랜선 2개가 있을 때 
+2개의 랜선을 만들어야 하면 
+100 2개가 아니라
+400으로 잘라서
+400 2개를 만들면 400이 최대 길이가 된다 
 '''
 
-K, N = map(int,input().split())
+K, N = map(int,input().split()) # 갖고있는 랜선의 개수, 필요한 랜선의 개수
 
-k_list = [int(input()) for _ in range(K)]
-bigone = max(k_list)
-start = 1
-end = bigone
-while start <= end:
-    cnt = 0
-    center = (start + end) // 2
-    for k in k_list:
-        cnt += k // center
-    if cnt >= N:
-        start = center + 1
-    else:
-        end = center - 1
-print(end)
-    
+arr = [int(input()) for _ in range(K)] # 갖고있는 랜선의 길이 리스트 
 
+max_len = max(arr) # 최대 랜선의 길이 초기값, 이미 갖고 있는 렌선 중 길이가 가장 긴 랜선의 길이보다 길게 자를 수 없음
+min_len = 1
+while min_len <= max_len:
+    # print(min_len, max_len)
+    mid_len = (max_len+min_len)//2
+    # print(mid_len)
+    counts = 0
+    for len in arr:
+        counts += len//mid_len
 
+    if counts >= N: # 더 많이 나오면 더 길게 잘라봐도 됨 
+        min_len = mid_len + 1
+    elif counts < N: # 더 적게 나오면 더 짧게 잘라야함 
+        max_len = mid_len - 1
 
+print(max_len)
