@@ -12,9 +12,8 @@ input = sys.stdin.readline
 import heapq
 
 def dijkstra(start,end):
-    INF = 100000
+    INF = 10000000000
     distance = [INF for _ in range(100001)]
-    distance[0] = 0
     distance[start] = 0
 
     q = []
@@ -22,7 +21,7 @@ def dijkstra(start,end):
 
     while q:
         distance_from_start, departures = heapq.heappop(q)
-        for weight, arrivals in [(1,departures + 1),(1,departures - 1),(0,departures*2)]:
+        for weight, arrivals in [(1,departures + 1),(1,departures - 1),(0,departures * 2)]:
             if 0 <= arrivals <= 100000 and distance_from_start + weight < distance[arrivals]:
                 distance[arrivals] = distance_from_start + weight
                 heapq.heappush(q,(distance[arrivals],arrivals))
