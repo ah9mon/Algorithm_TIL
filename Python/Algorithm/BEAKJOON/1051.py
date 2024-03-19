@@ -2,9 +2,6 @@
 
 '''
 https://www.acmicpc.net/problem/1051
-
-
-
 '''
 n,m = map(int,input().split())
 rec = [input() for _ in range(n)]
